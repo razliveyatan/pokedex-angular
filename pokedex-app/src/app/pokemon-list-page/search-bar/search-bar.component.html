@@ -1,0 +1,16 @@
+<form class="pokemon-searchbar-form">
+    <div class="pokemon-autocomplete-field">  
+    <input type="text"
+            placeholder="Search a Pokemon"
+            aria-label="Pokemone"
+            [formControl]="myControl"
+            [matAutocomplete]="auto"
+            class="pokemon-autocomplete-input"
+            (input)="onSearchInputChange($event)">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let result of filteredOptions | async" [value]="result" (onSelectionChange)="onOptionSelected(result)">
+                <span>{{result}}</span>
+            </mat-option>
+        </mat-autocomplete>    
+    </div>
+</form>

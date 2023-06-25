@@ -1,0 +1,44 @@
+.birthdate-form-container{
+  width: 100%;
+  height: 100%;
+  padding-top: 10rem;
+  display: flex;
+}
+
+.birthdate-inner {  
+    width: auto;    
+    padding: 40px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    text-align: center;    
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }

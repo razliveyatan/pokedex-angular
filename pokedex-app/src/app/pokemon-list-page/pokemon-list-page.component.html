@@ -1,0 +1,8 @@
+<div class="pokemon-list-page">    
+    <div class="podex-logo">
+        <img src="assets/podedex_logo.png"/>
+    </div>
+    <autocomplete-search-bar [pokemonListItems]="pokemonResultsItems" (updateRequest)="handleUpdateRequest($event)" (updateInitializeRequest)="handleInitializeRequest()"></autocomplete-search-bar>
+    <app-pokemon-card-list [pokemonsList]="pokemonListItems"></app-pokemon-card-list>
+    <pagination-component *ngIf="pokemonPagesDictionary" [pokemonPagesDictionary]="pokemonPagesDictionary" [currentPage]="currentPage" (updateRequest)="handleUpdateRequest($event)"></pagination-component>
+</div>

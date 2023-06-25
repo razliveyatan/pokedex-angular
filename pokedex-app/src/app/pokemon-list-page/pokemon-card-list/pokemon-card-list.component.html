@@ -1,0 +1,13 @@
+ <div class="pokemon-card-list-container">
+    <app-pokemon-card-item
+      *ngFor="let pokemonCardItem of pokemonsList"
+      [card]="pokemonCardItem"
+      (click)="openStatItem(pokemonCardItem)"
+    ></app-pokemon-card-item>
+  </div>
+  <ng-container *ngIf="selectedPokemon">
+    <app-pokemon-stats-item
+      [card]="selectedPokemon"
+      (closeStatItem)="closeStatItem()"
+    ></app-pokemon-stats-item>
+  </ng-container>

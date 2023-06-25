@@ -1,0 +1,22 @@
+.pokemon-card-list-container{
+    display: grid;
+    grid-template-columns: repeat(2,160px);
+    gap: 1rem;
+    max-width:1280px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 4rem;
+    justify-content: center;
+} 
+  
+  @media (min-width: 1024px) {
+    .pokemon-card-list-container {
+      grid-template-columns: repeat(3, 160px);
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .pokemon-card-list-container {
+      grid-template-columns: repeat(6, 160px);
+    }
+  }

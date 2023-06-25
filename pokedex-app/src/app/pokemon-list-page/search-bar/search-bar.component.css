@@ -1,0 +1,34 @@
+.pokemon-searchbar-form {
+    max-width: 800px;    
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 2rem;      
+  }
+  
+  .pokemon-autocomplete-field {
+    width: 100%;   
+    display: flex; 
+    justify-content: center;
+  }
+
+  .pokemon-autocomplete-input{
+    border-radius: 17px;
+    height:60px;
+    width:730px;
+    border: 2px solid #0043C0;    
+    padding-left:2rem;
+  }
+
+@media (max-width: 768px) {
+  .pokemon-autocomplete-input {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pokemon-autocomplete-input {
+    width: 100%;
+    max-width: 300px;
+  }
+}

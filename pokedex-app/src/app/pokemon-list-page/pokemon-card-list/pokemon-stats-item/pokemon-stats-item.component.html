@@ -1,0 +1,51 @@
+<div class="pokemon-stats-container">
+    <div class="pokemon-stats-overlay">
+        <div class="pokemon-stats-content">
+            <button class="close-button" (click)="onCloseStatItem()">
+                <img src="assets/Close_Square.png"/>
+            </button>
+            <div class="pokemon-stats-img">
+                <img [src]="card?.imgUrl"/>
+            </div>
+            <div class="pokemon-stats-name">
+                <div class="pokemon-name">{{card?.name}}</div>
+            </div>
+            <div class="pokemon-abilities-container">
+                <ul class="pokemon-abilities">
+                    <li class="pokemon-ability" *ngFor="let pokemonAbility of card?.stats">
+                        <img class="ability-img" [src]="'assets/' + pokemonAbility?.stat?.name + '_icon.png'"/>
+                        <p class="ability-name">{{pokemonAbility?.stat?.name}}</p>
+                        <p class="ability-stat">{{pokemonAbility?.base_stat}}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="pokemon-general-stats-container">
+                <ul class="pokemon-general-stats">
+                    <li class="pokemon-general-stat">
+                        <span>HEIGHT</span>
+                        <span>{{card?.height}}</span>
+                    </li>
+                    <li class="pokemon-general-stat">
+                        <span>WEIGHT</span>
+                        <span>{{card?.weight}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="pokemon-main-abilities-container">
+                <div class="main-abilities-inner">                    
+                    <img class="main-ability-img-left" src="assets/stars_left_icon.png">
+                    <div class="main-abilities-header">ABILITIES</div>                    
+                    <img class="main-ability-img-right" src="assets/stars_right_icon.png">                    
+                </div>                
+                <ul class="main-abilities-list">
+                    <li class="main-ability" *ngFor="let pokemonMainAbility of card?.abilities">
+                        <span>{{pokemonMainAbility.ability.name}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="close-pokemon-stat-button">
+                <button class="pokemon-close-button" type="button" (click)="onCloseStatItem()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+.pokemon-list-page {
+    min-height: 1500px;
+    display: flex;    
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: nowrap;
+    /* background: url(/assets/pokedex_background.png) round; */
+    padding-top:5rem;
+}
+
+.podex-logo {
+    margin-left:auto;
+    margin-right:auto;
+    width:auto;
+    margin-bottom: 2rem;
+}
+
+.podex-logo > img{
+    height:auto;
+    max-width: 100%;
+}
